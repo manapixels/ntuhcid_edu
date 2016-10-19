@@ -2,73 +2,112 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>"EduLearn"</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css">
+    <title>EduLearn</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
-<body>
+<body id="page-top">
     
-    <menu></menu>
-    <section id="header">
-        <h1>This is a header!</h1>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><font color = 'white'>Edu</font><font color = f8665e>Learn</font></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#projectstages">Project Stages</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#description">Our App</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a href="#info"><span class="glyphicon glyphicon-info-sign"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+        
+    <section id="header" class="text-center" >
+        <div>
+            <h1>We are revolutionising the way lessons are taught.</h1>
+        </div>
     </section>
     
-    <section id="projectstages">
+    <section id="projectstages" class="container text-center">
+        <h1>Project Stages</h1>
         <div>
-            <img src="images/needfinding.jpg" alt="Needfinding" />
-            <h1>Needfinding</h1>
-            <p><a href="files/01-needfinding.ppt">Needfinding</a></p>
+            <h1><img src="images/needfinding.jpg" alt="Needfinding" />Needfinding</h1>
+            <p><a href="files/01-needfinding.pdf" target="_blank" >Presentation Slides</a></p>
         </div>
         
         <div>
-            <img src="images/POVs.jpg" alt="POVs & Prototypes" />
-            <h1>POVs &amp; experience prototypes</h1>
-            <p></p>
+            <h1><img src="images/POVs.jpg" alt="POVs & Prototypes" />Point of view &amp; experience prototype</h1>
+            <p><a href="">Video link</a></p>
+            <p><a href="">Presentation Slides</a></p>
         </div>
         
          <div>
-            <img src="images/website.jpg" alt="Website" />
-            <h1>Website</h1>
-            <p></p>
-        </div>
-        
-         <div>
-            <img src="images/conceptvideo.jpg" alt="Concept video" />
-            <h1>Concept video</h1>
-            <p></p>
+            
+            <h1><img src="images/conceptvideo.jpg" alt="Concept video" />Concept video</h1>
+            <p><a href="">Video link</a></p>
+            <p><a href="">Presentation Slides</a></p>
         </div>
         
         <div>
-            <img src="images/lofiprototype.jpg" alt="Low-Fi Prototype" />
-            <h1>Low-Fi Prototype</h1>
-            <p></p>
+            <h1><img src="images/lofiprototype.jpg" alt="Low-Fi Prototype" />Low-Fi Prototype</h1>
+            <p><a href="">Report</a></p>
+            <p><a href="">Presentation Slides</a></p>
         </div>
         
         <div>
-            <img src="images/mediumfiprototype.jpg" alt="Medium-Fi Prototype" />
-            <h1>Medium-Fi Prototype</h1>
-            <p></p>
+            
+            <h1><img src="images/mediumfiprototype.jpg" alt="Medium-Fi Prototype" />Medium-Fi Prototype</h1>
+            <p><a href="">Readme</a></p>
+            <p><a href="">Try it!</a></p>
+            <p><a href="">Heuristic evaluation</a></p>
+            <p><a href="">Presentation Slides</a></p>
         </div>
         
-        <div>
-            <img src="images/heuristicevaluation.jpg" alt="Heuristic Evaluation" />
-            <h1>Heuristic evaluation</h1>
-            <p></p>
-        </div>
         
         <div>
-            <img src="images/hifiprototype.jpg" alt="Hi-Fi Prototype" />
-            <h1>Hi-Fi Prototype</h1>
-            <p></p>
+            <h1><img src="images/hifiprototype.jpg" alt="Hi-Fi Prototype" />Hi-Fi Prototype</h1>
+            <p><a href="">Readme</a></p>
+            <p><a href="">Try it!</a></p>
+            <p><a href="">Pitch Slides</a></p>
+            <p><a href="">Poster</a></p>
+            <p><a href="">Report</a></p>
         </div>
         
         <div>
@@ -81,49 +120,52 @@
         
     </section>
     
-    <section id="description">
+    <section id="description" class="container text-center">
         <h1>Description</h1>
         <p>Coming soon<br/><img src="images/constructionworker.png" alt="Coming soon!" /></p>
     </section>
     
     
     
-    <section id="team">
+    <section id="team" class="container text-center">
         <h1>Our Team</h1>
-        <div>
-            <img src="images/mike.jpg" alt="Mike" />
-            <span>Mike</span>
-            <span>Information Engineering</span>
-            <span>The Netherlands</span>
-            
+        <img src="images/map.svg" alt="Our origins" />
+        <div class="flexy ourteam">
+            <div class="flexy-child">
+                <img src="images/mike.jpg" alt="Mike" class="img-thumbnail" />
+                <span class="name">Mike</span>
+                <span class="specialty">Information Engineering</span>
+                <span class="origin">The Netherlands</span></div>
+            <div class="flexy-child">
+                <img src="images/nicole.jpg" alt="Nicole" class="img-thumbnail" />
+                <span class="name">Nicole</span>
+                <span class="specialty">International Information Systems</span>
+                <span class="origin">Germany</span></div>
+            <div class="flexy-child">
+                <img src="images/lukas.jpg" alt="Lukas" class="img-thumbnail" />
+                <span class="name">Lukas</span>
+                <span class="specialty">Computer Science</span>
+                <span class="origin">Lithuania</span></div>
+            <div class="flexy-child">
+                <img src="images/zhenyang.jpg" alt="Zhenyang" class="img-thumbnail" />
+                <span class="name">Zhenyang</span>
+                <span class="specialty">Information Systems Tech &amp; Design</span>
+                <span class="origin">Singapore</span></div>
+            <div class="flexy-child">
+                <img src="images/penghsuan.jpg" alt="Danniel" class="img-thumbnail" />
+                <span class="name">Danniel</span>
+                <span class="specialty">Computer Science</span>
+                <span class="origin">Taiwan</span></div>
         </div>
-        <div>
-            <img src="images/nicole.jpg" alt="Nicole" />
-            <span>Nicole</span>
-            <span>International Information Systems</span>
-            <span>Germany</span>
-            
-        </div>
-        <div>
-             <img src="images/lukas.jpg" alt="Lukas" />
-            <span>Lukas</span>
-            <span>Computer Science</span>
-            <span>Lithuania</span>
-            
-        </div>
-        <div>
-            <img src="images/penghsuan.jpg" alt="Peng-Hsuan" />
-            <span>Peng-Hsuan</span>
-            <span>Computer Science</span>
-            <span>Taiwan</span>
-        </div>
-        <div>
-            <img src="images/zhenyang.jpg" alt="Zhenyang" />
-            <span>Zhenyang</span>
-            <span>Information Systems Tech &amp; Design</span>
-            <span>Singapore</span>
-        </div>
+        
+        
+        
     </section>
 
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
+    
 </body>
 </html>
