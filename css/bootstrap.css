@@ -1088,7 +1088,7 @@ html {
 }
 body {
   font-family: "Raleway-Regular", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 1.6em;
   line-height: 1.42857143;
   color: #3e3f3a;
   background-color: #ffffff;
@@ -1102,12 +1102,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #93c54b;
+  color: #f8665e;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #79a736;
+  color: #fa9c96;
   text-decoration: underline;
 }
 a:focus {
@@ -5959,7 +5959,8 @@ button.close {
 }
 .modal-body {
   position: relative;
-  padding: 15px;
+  padding: 2em;
+    line-height: 2em;
 }
 .modal-footer {
   padding: 15px;
