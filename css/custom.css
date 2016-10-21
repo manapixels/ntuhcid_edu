@@ -29,6 +29,14 @@
         -o-transform: translateY(-100%);
         transform: translateY(-100%);
     }
+    50% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
     80% {
         opacity: 1;
         -webkit-transform: translateY(-5%);
@@ -48,6 +56,14 @@
 }
 @keyframes fade-fly-in {
     0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    50% {
         opacity: 0;
         -webkit-transform: translateY(-100%);
         -moz-transform: translateY(-100%);
@@ -179,11 +195,10 @@ section#header .iphone {
     max-width: 400px;
     will-change: transform;
     animation-name: fade-fly-in;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
+    animation-duration: 1.3s;
+    -webkit-animation-duration: 1.3s;
     animation-timing-function: ease;
     -webkit-animation-timing-function: ease;
-    animation-delay: 0.5s;
 }
 section#header div {
     vertical-align: middle;
