@@ -74,7 +74,6 @@ section#header {
     width: 100%;
     padding-left: 25%;
     padding-right: 25%;
-    display: table;
 }
 section#header .btn_how {
     display: inline-block;
@@ -99,9 +98,11 @@ section#header .btn_how:hover {
     text-decoration: none;
 }
 section#header div {
-    display: table-cell;
     vertical-align: middle;
     text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 section#header div h1 {
     font-size: 5em;
@@ -188,6 +189,9 @@ section#team {
 
 ````````````````````````*/
 
+.ourteam {
+    
+}
 .ourteam div img {
     border: #3e3f3a solid 2px;
     margin-left: -2px;
@@ -205,8 +209,9 @@ section#team {
     text-transform: uppercase;
 }
 .specialty {
-    font-style: italic;
     padding: 0.2em;
+    font-weight: bold;
+    letter-spacing: 0.02em;
 }
 .origin {
     padding: 0.2em;
@@ -364,7 +369,7 @@ section#team {
 }
 @media only screen and (min-width: 1100px) {
   .cd-horizontal-timeline {
-    margin: 6em auto;
+    margin: 2em auto;
   }
   .cd-horizontal-timeline::before {
     /* never visible - this is used in jQuery to check the current MQ */
@@ -387,7 +392,6 @@ section#team {
   transform: translateY(-50%);
   height: 34px;
   width: 34px;
-  border-radius: 50%;
   border: 2px solid #dfdfdf;
   /* replace text with an icon */
   overflow: hidden;
@@ -397,6 +401,11 @@ section#team {
   -webkit-transition: border-color 0.3s;
   -moz-transition: border-color 0.3s;
   transition: border-color 0.3s;
+}
+.cd-timeline-navigation a.prev,
+.cd-timeline-navigation a.next {
+    color: #f8665e;
+    border: 2px solid #f8665e;
 }
 .cd-timeline-navigation a.prev {
     left: 0;
@@ -410,7 +419,6 @@ section#team {
 .cd-timeline-navigation a.next {
     right: 0;
     padding: 0.35em 0;
-    color: #f8665e;
 }
 .no-touch .cd-timeline-navigation a:hover {
   border-color: #f8665e;
@@ -418,6 +426,7 @@ section#team {
 .cd-timeline-navigation a.inactive {
     cursor: not-allowed;
     color: #dfdfdf;
+    border: 2px solid #dfdfdf;
 }
 .cd-timeline-navigation a.inactive::after {
   background-position: 0 -16px;
@@ -429,7 +438,7 @@ section#team {
 .cd-horizontal-timeline .events-content {
   position: relative;
   width: 100%;
-  margin: 2em 0;
+  margin: 1em 0;
   overflow: hidden;
   -webkit-transition: height 0.4s;
   -moz-transition: height 0.4s;
@@ -437,6 +446,7 @@ section#team {
 }
 .cd-horizontal-timeline .events-content ol {
     list-style-type: none;
+    padding: 0;
 }
 .cd-horizontal-timeline .events-content li {
   position: absolute;
@@ -497,11 +507,13 @@ section#team {
 }
 .cd-horizontal-timeline .events-content p {
     font-size: 1.15em;
-    color: #959595;
+    color: #323232;
     padding: 1.2em 0;
+    text-align: justify;
+/*    text-indent: 2em;*/
 }
 .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
-  line-height: 1.6;
+  line-height: 1.8;
 }
 @media only screen and (min-width: 768px) {
   .cd-horizontal-timeline .events-content h2 {
@@ -603,4 +615,51 @@ section#team {
     display: block;
     padding: 0.5em 0;
     border-radius: 0.9em;
+}
+
+    
+/*
+    S M A L L  S C R E E N S
+
+````````````````````````*/
+
+@media only screen and (min-width : 0px) and (max-width : 884px) {
+    section#header {
+        height: 100vh;
+        width: 100%;
+        padding-left: 18%;
+        padding-right: 18%;
+    }
+    section#header div {
+        top: 30%;
+        transform: translateY(-30%);
+    }
+    section#header div h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #FFF;
+        border: #FFF solid 0.08em;
+        padding: 0.5em;
+    }
+    section#header .btn_how {
+        bottom: 1.5em;
+    }
+    .cd-horizontal-timeline {
+        margin: 0 auto;
+    }
+    .flexy {
+        flex-flow: column wrap;
+    }
+    .map-image {
+        display: none;
+    }
+    .name {
+        padding: 0.5em 0;
+    }
+    .specialty {
+        padding-bottom: 0.5em;
+    }
+    .ourteam .flexy-child {
+        padding-bottom: 1em;
+    }
 }

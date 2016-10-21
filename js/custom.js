@@ -20,6 +20,7 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 jQuery(document).ready(function($){
+
 	var timelines = $('.cd-horizontal-timeline'),
 		eventsMinDistance = 60;
 
@@ -295,4 +296,12 @@ jQuery(document).ready(function($){
 		//check if mobile or desktop device
 		return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
 	}
+    
+    $(window).resize(function() {
+        $('.events-content').each(function(){
+            var $this = $(this),
+                olContent = $this.find('ol');
+            $(this).css('height', olContent.height() +'px');
+        });
+    });
 });
