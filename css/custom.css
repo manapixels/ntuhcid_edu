@@ -16,6 +16,65 @@
 
 /*
 
+    A N I M A T I O N S
+
+````````````````````````*/
+
+@-webkit-keyframes fade-fly-in {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translateY(-5%);
+        -moz-transform: translateY(-5%);
+        -ms-transform: translateY(-5%);
+        -o-transform: translateY(-5%);
+        transform: translateY(-5%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes fade-fly-in {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translateY(-5%);
+        -moz-transform: translateY(-5%);
+        -ms-transform: translateY(-5%);
+        -o-transform: translateY(-5%);
+        transform: translateY(-5%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/*
+
     F O N T S
 
 ````````````````````````*/
@@ -51,7 +110,9 @@
     S E C T I O N 
 
 ````````````````````````*/
-
+.navbar-brand {
+    font-style: italic;
+}
 body > section {
     padding: 6em;
     margin: 0 auto;
@@ -64,7 +125,7 @@ section#header:before {
     top: 0;
     left: 0;
     background-color: #464646; /* display while bg image loads */
-    background: url(../images/background-photo2.jpg) no-repeat center center;
+    background: url(../images/background-photo.jpg) no-repeat center center;
     background-size: cover;
     will-change: transform; /* creates a new paint layer */
     z-index: -1;
@@ -81,7 +142,6 @@ section#header .btn_how {
     max-width: 75%;
     text-align: center;
     line-height: 2em;
-    background: #f8665e;
     font-size: 1.4em;
     border-radius: 50em;
     color: #ffffff;
@@ -90,25 +150,53 @@ section#header .btn_how {
     transition: all 0.2s;
     position: absolute;
     z-index: 100;
-    bottom: 2.5em;
+    bottom: 8em;
+    border: #FFF solid 0.2em;
     left: calc(50% - 4em);
+    text-decoration: none;
+}
+@media only screen and (min-width : 0px) and (max-width : 500px) {
+    section#header .btn_how {
+        bottom: 4em;
+    }
+}
+@media only screen and (min-width : 500px) and (max-width : 620px) {
+    section#header .btn_how {
+        bottom: 14em;
+    }
+}
+@media only screen and (min-width : 620px) and (max-width : 884px) {
+    section#header .btn_how {
+        bottom: 10em;
+    }
 }
 section#header .btn_how:hover {
-    background: #ff6e64;
+    background: rgba(255,255,255,0.3);
     text-decoration: none;
+}
+section#header .iphone {
+    width: 100%;
+    max-width: 400px;
+    will-change: transform;
+    animation-name: fade-fly-in;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+    animation-delay: 0.5s;
 }
 section#header div {
     vertical-align: middle;
     text-align: center;
     position: relative;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
 }
 section#header div h1 {
     font-size: 5em;
     font-weight: bold;
     color: #FFF;
-    border: #FFF solid 0.08em;
+/*    border: #FFF solid 0.08em;*/
     padding: 0.5em;
 }
 section#projectstages {
@@ -195,9 +283,11 @@ section#team {
 .ourteam div img {
     border: #3e3f3a solid 2px;
     margin-left: -2px;
+    display: block;
 }
 .name, .specialty, .origin {
     flex: 1;
+    display: block;
     align-content: space-around;
 }
 .name {
@@ -641,9 +731,6 @@ section#team {
         border: #FFF solid 0.08em;
         padding: 0.5em;
     }
-    section#header .btn_how {
-        bottom: 1.5em;
-    }
     .cd-horizontal-timeline {
         margin: 0 auto;
     }
@@ -662,4 +749,10 @@ section#team {
     .ourteam .flexy-child {
         padding-bottom: 1em;
     }
+    .flexy-column-parent {
+        display: flex;
+        /* justify-content: space-between; */
+        flex-flow: row wrap;
+        align-content: center;
+        align-items: center;
 }
