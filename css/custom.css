@@ -191,7 +191,7 @@ section#header .btn_how:hover {
     text-decoration: none;
 }
 section#header .iphone {
-    width: 100%;
+    width: 70%;
     max-width: 400px;
     will-change: transform;
     animation-name: fade-fly-in;
